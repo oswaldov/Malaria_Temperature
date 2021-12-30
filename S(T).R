@@ -77,7 +77,7 @@ efd.M<-rowMeans(efd)
 pea.M<-rowMeans(e2a)
 bc.M<-rowMeans(bc)
 mu.M<-rowMeans(mu)
-ST.M<-rowMeans(R0)
+ST.M<-rowMeans(ST)
 
 
 ## Build matrices to hold results
