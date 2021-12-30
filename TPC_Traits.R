@@ -1,4 +1,4 @@
-## First load the necessary librarys and files for the computation and
+## First load the necessary R packages and files for the computation and
 ## visualization
 library('rjags')
 library('MASS')
@@ -79,7 +79,7 @@ tau ~ dnorm(1000, 1/500)
 
 ## Use jags.model for the specific model with the appropiate
 ## default priors
-jags1 <- jags.model(textConnection(jags_briere.bug),
+jags1 <- jags.model(textConnection(jags_briere.bug),  ## change the model according to the trait. This example is for MDR
                     data = list('Y' = data$trait, 'T' = data$T, 'N'=length(data$T)),
                     n.chains = n.chains, inits=list(Tm=31, T0=5, c=0.00007),
                     n.adapt = n.adapt) 
@@ -107,7 +107,7 @@ samps$tau<-1/samps$sigma
 ## Next we want to use the parameter samples to get posterior samples
 ## of the temperature rsponses themselves
 Temps<-seq(0,50, by=0.1)
-out<-make.sims.temp.resp(sim="briere", MDR.sampsgampf, Temps, thinned=seq(1,n.samps, length = 1000))
+out<-make.sims.temp.resp(sim="briere", MDR.sampsgampf, Temps, thinned=seq(1,n.samps, length = 1000)) ## Example for MDR
 summary(out)
 
 ## and then we calculate the 95% inner quantile/HPD
@@ -125,19 +125,18 @@ plot(data$T, data$trait, xlim = c(0, 45), ylim = c(0, 0.15), cex.lab=1.6, cex.ax
      ylab="Mosquito development rate, MDR",
      box(lty = "solid", bty = "o"))
 
-legend(-6,0.16, paste('', "f"), text.font = 3, bty = "n", xjust= 0, cex= 2.5)
+legend(1,0.16, paste('', "f"), text.font = 3, bty = "n", xjust= 0, cex= 2.5)
 
 add.sim.lines(Temps, sim.data=out$fits, mycol=1, lwd=2)
 lines(Temps, hpdl, col="blue", lty=5, lwd=2)
 lines(Temps, hpdh, col="blue", lty=5, lwd=2)
 
 
-### Save everything
+### Save everything to be used in the calculation of the S(T)
 
-###gambiae P. falciparum
 
-save(a.sampsgampf, efd.sampsgampf, mu.sampsgampf, e2a.sampsgampf, MDR.sampsgampf, bc.sampsgampf, PDR.sampsgampf, 
-     file = "Angamb_PfalcMay20_prior_samps.Rsave")
+save(a.sampsgampf, efd.sampsgampf, mu.sampsgampf, pea.sampsgampf, MDR.sampsgampf, bc.sampsgampf, PDR.sampsgampf, 
+     file = "Angamb_Pfalc_samps.Rsave") ## example for An. gambiae with P. falciparum
 
 
 
