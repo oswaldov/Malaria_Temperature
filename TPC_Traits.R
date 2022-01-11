@@ -1,3 +1,11 @@
+###################################################################
+## Code to reproduce the estimation of the thermal performance curves (TPC)
+## requires datafile "data/traits.csv"
+##code by Oswaldo C. Villena, Leah R. Johnson
+##11 January 2022
+###################################################################
+
+
 ## First load the necessary R packages and files for the computation and
 ## visualization
 library('rjags')
@@ -5,13 +13,10 @@ library('MASS')
 
 
 ## Next load data
-
 data.all<-read.csv("data/traits.csv", header=TRUE)
-data.all
 
 
 ## specify the parameters that control the MCMC
-
 n.chains<-5
 n.adapt<-10000
 n.samps<-20000
@@ -131,12 +136,6 @@ add.sim.lines(Temps, sim.data=out$fits, mycol=1, lwd=2)
 lines(Temps, hpdl, col="blue", lty=5, lwd=2)
 lines(Temps, hpdh, col="blue", lty=5, lwd=2)
 
-
-### Save everything to be used in the calculation of the S(T)
-
-
-save(a.sampsgampf, efd.sampsgampf, mu.sampsgampf, pea.sampsgampf, MDR.sampsgampf, bc.sampsgampf, PDR.sampsgampf, 
-     file = "Angamb_Pfalc_samps.Rsave") ## example for An. gambiae with P. falciparum
 
 
 
