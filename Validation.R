@@ -1,3 +1,10 @@
+######################################################
+## Code to reproduce the consistency analysis 
+## requires datafile "data/Prevalence_Pfalciparum.csv"
+##code by Oswaldo C. Villena, Leah R. Johnson
+##11 January 2022
+######################################################
+
 ##Example to validate the model for An. gambiae/P. falciparum
 ## First load the necessary R packages and files for the computation and
 ## visualization 
