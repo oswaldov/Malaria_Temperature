@@ -11,10 +11,8 @@
 library("statmod")
 library("visreg")
 library("dplyr")
-library("modEvA")
 library("sjPlot")
 library("texreg")
-library("ggstance")
 library("coefplot")
 
 ## Load data
@@ -94,8 +92,6 @@ bics <- c(BIC(reg1), BIC(reg2), BIC(reg3), BIC(reg4), BIC(reg5), BIC(reg6), BIC(
 #### Model Comparisons (within sample)
 
 bics
-ebics<-exp(-0.5*(bics-min(bics)))
-ebics
 probs <- round(ebics/sum(ebics), 5)
 probs
 
