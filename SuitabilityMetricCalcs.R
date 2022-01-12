@@ -1,8 +1,8 @@
 ###################################################################
 ## Code to reproduce the estimation of the suitability metric S(T)
 ## requires datafile "Angamb_Pfalc_samps.Rsave"
-##code by Oswaldo C. Villena, Leah R. Johnson
-##11 January 2022
+## code by Oswaldo C. Villena, Leah R. Johnson
+## 11 January 2022
 ###################################################################
 
 
@@ -35,7 +35,7 @@ lthin<-length(thinned)  ## number of thinned samples
 ec<-0.000001  ## small constant used to keep denominators from being numerically zero
 
 
-## function encoding the value of S(T) as a function of the parameters
+## Function encoding the value of S(T) as a function of the parameters
 myST <-function(a, PDR, MDR, efd, pea, bc, mu){
   ((a^2*bc*(efd*pea*MDR/mu^2)*exp(-mu/(PDR+ec)))/(mu+ec))^0.5
 }
