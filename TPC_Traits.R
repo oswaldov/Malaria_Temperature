@@ -1,8 +1,8 @@
 ###################################################################
 ## Code to reproduce the estimation of the thermal performance curves (TPC)
 ## requires datafile "data/traits.csv"
-##code by Oswaldo C. Villena, Leah R. Johnson
-##11 January 2022
+## code by Oswaldo C. Villena, Leah R. Johnson
+## 11 January 2022
 ###################################################################
 
 
