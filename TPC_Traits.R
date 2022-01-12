@@ -15,6 +15,10 @@ library('MASS')
 ## Next load data
 data.all<-read.csv("data/traits.csv", header=TRUE)
 
+## Select the trait of interest. Here we showed as an example MDR for An. gambiae
+data<-data.all[which(data.all$trait.name=="mdr" & data.all$specie=="An. gambiae"), 2:9]
+plot(data$T, data$trait) ## visualize your data
+
 
 ## specify the parameters that control the MCMC
 n.chains<-5
