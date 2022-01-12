@@ -16,7 +16,7 @@ library(Hmisc)
 ## First, we identify the files where the posterior samples for each
 ## component of R0 are saved.
 
-post<- load("Angamb_Pfalc_samps.Rsave") ## Rdata file from previous step
+post<- load("data/Angamb_Pfalc_samps.Rsave") ## Rdata file from previous step
 
 
 ## Next we set up the temperatures over which we will be evaluating S(T)
