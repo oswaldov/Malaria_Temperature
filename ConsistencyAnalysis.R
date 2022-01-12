@@ -1,8 +1,8 @@
 ######################################################
 ## Code to reproduce the consistency analysis 
 ## requires datafile "data/Prevalence_Pfalciparum.csv"
-##code by Oswaldo C. Villena, Leah R. Johnson
-##11 January 2022
+## code by Oswaldo C. Villena, Leah R. Johnson
+## 11 January 2022
 ######################################################
 
 ## Example to validate the model for An. gambiae/P. falciparum 
@@ -20,8 +20,6 @@ dat1<-read.csv("data/Prevalence_Pfalciparum.csv", header=TRUE)
 
 ## select data >= 1990
 datf<-dat1[dat1$year_start>=1990,]
-head(datf)
-dim(datf)
 
 ## Select covariates of interest
 
