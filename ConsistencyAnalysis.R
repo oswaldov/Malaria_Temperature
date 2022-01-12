@@ -45,10 +45,6 @@ dat2$R0G0.lgdp<- dat2$STGZ*log(dat2$GDP_adjusted)
 dat2$lR0G0.pop<-log((dat2$STGZ*dat2$pop_den)+1)
 dat2$lR0G0.gdp<- log((dat2$STGZ*dat2$GDP_adjusted)+1)
 
-
-names(dat2)
-dim(dat2)
-
 ##Check correlation
 vary<- c(2,3,7:15)
 pairs(dat2[,vary])
