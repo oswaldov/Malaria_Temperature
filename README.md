@@ -2,10 +2,10 @@
 Data files and R code for manuscript entitled "Temperature impacts the environmental suitability for malaria transmission by Anopheles gambiae and Anopheles stephensi"
 
 # Authors
-Oswaldo C Villena
-Sadie J. Ryan
-Courtney C. Murdock
-Leah R. Johnson
+1. Oswaldo C Villena
+2. Sadie J. Ryan
+3. Courtney C. Murdock
+4. Leah R. Johnson
 
 # Modeling the temperature dependence of suitability 
 
