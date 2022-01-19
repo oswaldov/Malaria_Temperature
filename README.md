@@ -1,7 +1,7 @@
 # Malaria_Temperature
 Data files and R code for manuscript entitled "Temperature impacts the environmental suitability for malaria transmission by Anopheles gambiae and Anopheles stephensi"
 
-DOI: 10.5281/zenode.5874787
+Cite the code: [![DOI](https://zenodo.org/badge/442938145.svg)](https://zenodo.org/badge/latestdoi/442938145)
 
 # Authors
 1. Oswaldo C Villena
